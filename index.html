@@ -1,0 +1,356 @@
+<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.47422" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.47422" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.47422" type="text/javascript"></script>
+<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.47422" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.47422" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/imageinfo.js?v=3.3.47422" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/file-uploader/fileuploader.js?v=3.3.47422"></script>
+<script src="https://cdn02.jotfor.ms/js/payments/validategateways.js?v=3.3.47422" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = false;
+	JotForm.extendsNewTheme = true;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","appointmentSelected":"You’ve selected {time} on {date}","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+	JotForm.newPaymentUI = true;
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+	window.addEventListener('DOMContentLoaded',function(){window.Footer.init({"formID":233095334911050,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true})});	JotForm.isFullSource = true;
+
+      try{
+        var isEUDomain = /(?:eu.jotform)|(jotformeu.com)/.test(window.location.host);
+        var isHipaaDomain = /(?:hipaa.jotform)/.test(window.location.host);
+        var isEnterprise = JotForm.enterprise !== 'undefined' && JotForm.enterprise;
+        var formIdModTen = 0;
+        if (!isEUDomain && !isHipaaDomain && !isEnterprise && formIdModTen === 4) {
+          var sesApiUrl = /jotform.pro/.test(window.location.host) ? '/API' : 'https://api.jotform.com';
+          function sendOpenId(uuid, eventType) {
+            fetch(sesApiUrl + '/form/233095334911050/event/' + uuid + '/' + eventType, { method: 'POST' })
+            .then(function() {})
+            .catch(function(sendOpenIdError) {console.log(sendOpenIdError)});
+          }
+          var formOpenId = crypto.getRandomValues(new BigUint64Array(1)).toString();
+          sendOpenId = sendOpenId.bind(this, formOpenId);
+          function sendOpenIdOnSubmit() {
+            var currentForm = $('233095334911050');
+            currentForm.addEventListener('submit', function() { sendOpenId('submitClicked'); });
+            var openIdInput = currentForm.querySelector('[name="formOpenId"]');
+            if (!openIdInput) {
+              openIdInput = document.createElement('input');
+              openIdInput.setAttribute('type', 'hidden');
+              openIdInput.setAttribute('name', 'formOpenId');
+              currentForm.appendChild(openIdInput);
+            }
+            openIdInput.value = formOpenId;
+          }
+          sendOpenId('view');
+          if (document.readyState == 'complete' || (this.jsForm && (document.readyState === undefined || document.readyState === 'interactive'))) {
+              sendOpenIdOnSubmit();
+          } else {
+              document.ready(sendOpenIdOnSubmit);
+          }
+        }
+      } catch(openIdBlockError) {
+        console.log(openIdBlockError);
+      }
+    
+	JotForm.init(function(){
+	/*INIT-START*/
+      JotForm.setPhoneMaskingValidator( 'input_58_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ if (!JotForm.calenderViewMonths) JotForm.calenderViewMonths = {};  JotForm.calenderViewMonths[25] = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ if (!JotForm.calenderViewDays) JotForm.calenderViewDays = {};  JotForm.calenderViewDays[25] = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("25", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("25", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); });
+      JotForm.alterTexts({"ageVerificationError":"You must be older than {minAge} years old to submit this form.","alphabetic":"This field can only contain letters","alphanumeric":"This field can only contain letters and numbers.","appointmentSelected":"You’ve selected {time} on {date}","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidNumber":"Credit Card Number is invalid.","ccMissingDetails":"Please fill up the Credit Card details.","ccMissingDonation":"Please enter numeric values for donation amount.","ccMissingProduct":"Please select at least one product.","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","chooseAFile_infoMessage":"Choose a file","confirmClearForm":"Are you sure you want to clear the form?","confirmEmail":"E-mail does not match","currency":"This field can only contain currency values.","cyrillic":"This field can only contain cyrillic characters","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","dateLimited":"This date is unavailable.","disallowDecimals":"Please enter a whole number.","doneButton":"Done","doneMessage":"Well done! All errors are fixed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","email":"Enter a valid e-mail address","error":"Error","fieldError":"field has an error.","fillMask":"Field value must fill mask.","freeEmailError":"Free email accounts are not allowed","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","gradingScoreError":"Score total should only be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","justSoldOut":"Just Sold Out","lessThan":"Your score should be less than or equal to","maxDigitsError":"The maximum digits allowed is","maxFileSize_infoMessage":"Max. file size","maxSelectionsError":"The maximum number of selections allowed is ","minCharactersError":"The number of characters should not be less than the minimum value:","minSelectionsError":"The minimum required number of selections is ","multipleError":"There are {count} errors on this page. Please correct them before moving on.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","nextButtonText":"Next","noSlotsAvailable":"No slots available","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","numeric":"This field can only contain numeric values","oneError":"There is {count} error on this page. Please correct it before moving on.","pastDatesDisallowed":"Date must not be in the past.","pleaseWait":"Please wait...","prevButtonText":"Previous","progressMiddleText":"of","required":"This field is required.","requiredLegend":"All fields marked with * are required and must be filled.","requireEveryCell":"Every cell is required.","requireEveryRow":"Every row is required.","requireOne":"At least one field required.","reviewBackText":"Back to Form","reviewSubmitText":"Review and Submit","seeAllText":"See All","seeErrorsButton":"See Errors","selectionSoldOut":"Selection Sold Out","slotUnavailable":"{time} on {date} has been taken. Please select another slot.","soldOut":"Sold Out","startButtonText":"START","submissionLimit":"Sorry! Only one entry is allowed. &lt;br&gt; Multiple submissions are disabled for this form.","submitButtonText":"Submit","subProductItemsLeft":"({count} items left)","uploadExtensions":"You can only upload following files:","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","url":"This field can only contain a valid URL","validateEmail":"You need to validate this e-mail","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is"});
+      setTimeout(function() {
+          JotForm.initMultipleUploads();
+      }, 2);
+	/*INIT-END*/
+	});
+
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"Bandhan Bank Recruitment Notification - 2023","type":"control_head"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"1Name","qid":"18","text":"1. Name in full (in Block letters)","type":"control_fullname"},{"description":"","name":"2Fathershusbands","qid":"19","text":"2. Father’s\u002FHusband’s Name: ","type":"control_fullname"},null,{"description":"","name":"3permanentAddress","qid":"21","text":"3. Permanent Address :","type":"control_address"},null,null,null,{"description":"","name":"7Date","qid":"25","text":"7. Date of Birth    :","type":"control_datetime"},null,{"description":"","name":"8whetherScstobcgen","qid":"27","text":"8. Category :","type":"control_checkbox"},null,null,null,null,{"name":"divider32","qid":"32","text":"Divider","type":"control_divider"},null,{"name":"input34","qid":"34","text":"                                             Declaration & Certificate\r\nI hereby declare and certify that all the statements made in this application are true and correct to the best of my knowledge and belief. If any of the particulars furnished by me are found to be incorrect or suppressed, my candidature is liable to be rejected at any stage during or after selection process. Further, I understand that this position is purely temporary on contract basis, if it is found after my appointment at the Centre that the particulars furnished by me are incorrect or suppressed, my services are liable to be terminated without any notice.","type":"control_text"},null,null,null,null,null,null,null,{"description":"","name":"4State","qid":"42","subLabel":"","text":"4. STATE","type":"control_dropdown"},null,{"description":"","name":"5Gender","qid":"44","text":"5. Gender","type":"control_checkbox"},null,null,null,null,null,null,null,null,{"name":"input53","qid":"53","text":"Fees Payment 320\u002F-&nbsp; &nbsp;&nbsp;PAY NOW&nbsp;&nbsp;","type":"control_text"},null,null,{"description":"","name":"fileUpload","qid":"56","subLabel":"DOC,DOCX,PDF (5MB)","text":"Upload your resume","type":"control_fileupload"},{"description":"","labelText":"","name":"image","qid":"57","text":"2560px-Bandhan_Bank_Svg_Logo.svg%20(1).654e47d7b1e832.36749025","type":"control_image"},{"description":"","name":"6Phone","qid":"58","text":"6. Phone Number","type":"control_phone"},null,null,null,{"name":"divider","qid":"62","text":"Divider","type":"control_divider"},{"name":"divider63","qid":"63","text":"Divider","type":"control_divider"}]);}, 20); 
+</script>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/form-common.css?v=e311ab0
+"/>
+<style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link id="custom-font" type="text/css" rel="stylesheet" href="//cdn.jotfor.ms/fonts/?family=Tinos" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/defaultV2.css?v=e311ab0
+"/>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/548b1325700cc48d318b4567.css?v=3.3.47422&themeRevisionID=64ff099762313412041c01ae"/>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_styles.css?3.3.47422" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_feature.css?3.3.47422" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/stylebuilder/donationBox.css?v=3.3.47422">
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Tinos, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #fff;
+    }
+  
+    .form-all {
+      color: rgb(46, 109, 164);
+    }
+    .form-header-group .form-header {
+      color: rgb(46, 109, 164);
+    }
+    .form-header-group .form-subHeader {
+      color: rgb(46, 109, 164);
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: rgb(46, 109, 164);
+    }
+    .form-sub-label {
+      color: 1a1a1a;
+    }
+  
+  .supernova {
+    background-color: #ecedf3;
+  }
+  .supernova body {
+    background: transparent;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #fff;
+    }
+  
+      
+    .supernova {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center top;
+    }
+
+      .supernova, #stage {
+        background-image: none;
+      }
+    
+      .form-all {
+        background-image: none;
+      }
+    /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/233095334911050" method="post" enctype="multipart/form-data" name="form_233095334911050" id="233095334911050" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="233095334911050" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1699631478756" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1699631478756" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li class="form-line" data-type="control_image" id="id_57">
+        <div id="cid_57" class="form-input-wide" data-layout="full">
+          <div style="text-align:center"><img alt="Image-57" loading="lazy" class="form-image" style="border:0" src="https://www.jotform.com/uploads/WBPostalRecruitment/form_files/2560px-Bandhan_Bank_Svg_Logo.svg%20(1).654e47d7b1e832.36749025.png" tabindex="0" height="50px" width="250px" data-component="image" role="presentation" /></div>
+        </div>
+      </li>
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">Bandhan Bank Recruitment Notification - 2023</h2>
+            <div id="subHeader_1" class="form-subHeader">Advertisement No. : NCAOR/69/16</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="first_18" aria-hidden="false"> 1. Name in full (in Block letters) </label>
+        <div id="cid_18" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_18" name="q18_1Name[first]" class="form-textbox" data-defaultvalue="" size="10" data-component="first" aria-labelledby="label_18 sublabel_18_first" value="" /><label class="form-sub-label" for="first_18" id="sublabel_18_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_18" name="q18_1Name[last]" class="form-textbox" data-defaultvalue="" size="15" data-component="last" aria-labelledby="label_18 sublabel_18_last" value="" /><label class="form-sub-label" for="last_18" id="sublabel_18_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_19"><label class="form-label form-label-top form-label-auto" id="label_19" for="first_19" aria-hidden="false"> 2. Father’s/Husband’s Name: </label>
+        <div id="cid_19" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_19" name="q19_2Fathershusbands[first]" class="form-textbox" data-defaultvalue="" size="10" data-component="first" aria-labelledby="label_19 sublabel_19_first" value="" /><label class="form-sub-label" for="first_19" id="sublabel_19_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_19" name="q19_2Fathershusbands[last]" class="form-textbox" data-defaultvalue="" size="15" data-component="last" aria-labelledby="label_19 sublabel_19_last" value="" /><label class="form-sub-label" for="last_19" id="sublabel_19_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_21" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_21" for="input_21_addr_line1" aria-hidden="false"> 3. Permanent Address : </label>
+        <div id="cid_21" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_21_addr_line1" name="q21_3permanentAddress[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" data-component="address_line_1" aria-labelledby="label_21 sublabel_21_addr_line1" required="" value="" /><label class="form-sub-label" for="input_21_addr_line1" id="sublabel_21_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_21_addr_line2" name="q21_3permanentAddress[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" data-component="address_line_2" aria-labelledby="label_21 sublabel_21_addr_line2" value="" /><label class="form-sub-label" for="input_21_addr_line2" id="sublabel_21_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_21_city" name="q21_3permanentAddress[city]" class="form-textbox form-address-city" data-defaultvalue="" data-component="city" aria-labelledby="label_21 sublabel_21_city" required="" value="" /><label class="form-sub-label" for="input_21_city" id="sublabel_21_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_21_state" name="q21_3permanentAddress[state]" class="form-textbox form-address-state" data-defaultvalue="" data-component="state" aria-labelledby="label_21 sublabel_21_state" required="" value="" /><label class="form-sub-label" for="input_21_state" id="sublabel_21_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_21_postal" name="q21_3permanentAddress[postal]" class="form-textbox form-address-postal" data-defaultvalue="" data-component="zip" aria-labelledby="label_21 sublabel_21_postal" required="" value="" /><label class="form-sub-label" for="input_21_postal" id="sublabel_21_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_42"><label class="form-label form-label-top form-label-auto" id="label_42" for="input_42" aria-hidden="false"> 4. STATE </label>
+        <div id="cid_42" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_42" name="q42_4State" style="width:310px" data-component="dropdown" aria-label="4. STATE">
+            <option value="">Please Select</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat ">Gujarat </option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value=""></option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_checkbox" id="id_44"><label class="form-label form-label-top form-label-auto" id="label_44" for="input_44" aria-hidden="false"> 5. Gender </label>
+        <div id="cid_44" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_44" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_44" class="form-checkbox" id="input_44_0" name="q44_5Gender[]" value="Male" /><label id="label_input_44_0" for="input_44_0">Male</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_44" class="form-checkbox" id="input_44_1" name="q44_5Gender[]" value="Female" /><label id="label_input_44_1" for="input_44_1">Female</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_44" class="form-checkbox" id="input_44_2" name="q44_5Gender[]" value="Others" /><label id="label_input_44_2" for="input_44_2">Others</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_58"><label class="form-label form-label-top form-label-auto" id="label_58" for="input_58_full"> 6. Phone Number </label>
+        <div id="cid_58" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_58_full" name="q58_6Phone[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" data-masked="true" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_58" value="" /></span> </div>
+      </li>
+      <li class="form-line" data-type="control_datetime" id="id_25"><label class="form-label form-label-top form-label-auto" id="label_25" for="lite_mode_25" aria-hidden="false"> 7. Date of Birth    : </label>
+        <div id="cid_25" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_25" name="q25_7Date[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_25 sublabel_25_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_25" id="sublabel_25_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_25" name="q25_7Date[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_25 sublabel_25_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_25" id="sublabel_25_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_25" name="q25_7Date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_25 sublabel_25_year" /><label class="form-sub-label" for="year_25" id="sublabel_25_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_25" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" data-placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_25" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_25_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label is-empty" for="lite_mode_25" id="sublabel_25_litemode" style="min-height:13px" aria-hidden="false"></label></span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_checkbox" id="id_27"><label class="form-label form-label-top form-label-auto" id="label_27" for="input_27" aria-hidden="false"> 8. Category : </label>
+        <div id="cid_27" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_27" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_27" class="form-checkbox" id="input_27_0" name="q27_8whetherScstobcgen[]" value="SC" /><label id="label_input_27_0" for="input_27_0">SC</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_27" class="form-checkbox" id="input_27_1" name="q27_8whetherScstobcgen[]" value="ST" /><label id="label_input_27_1" for="input_27_1">ST</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_27" class="form-checkbox" id="input_27_2" name="q27_8whetherScstobcgen[]" value="OBC-A" /><label id="label_input_27_2" for="input_27_2">OBC-A</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_27" class="form-checkbox" id="input_27_3" name="q27_8whetherScstobcgen[]" value="OBC-B" /><label id="label_input_27_3" for="input_27_3">OBC-B</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_27" class="form-checkbox" id="input_27_4" name="q27_8whetherScstobcgen[]" value="GEN" /><label id="label_input_27_4" for="input_27_4">GEN</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_62">
+        <div id="cid_62" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_56"><label class="form-label form-label-top form-label-auto" id="label_56" for="input_56" aria-hidden="false"> Upload your resume </label>
+        <div id="cid_56" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Upload resume <div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_56" name="q56_fileUpload[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Upload resume " /></div>
+                </div>
+              </div><span class="form-sub-label-container" style="vertical-align:top"><label class="form-sub-label" for="input_56" id="sublabel_input_56" style="min-height:13px" aria-hidden="false">DOC,DOCX,PDF (5MB)</label></span>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_63">
+        <div id="cid_63" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_34">
+        <div id="cid_34" class="form-input-wide" data-layout="full">
+          <div id="text_34" class="form-html" data-component="text" tabindex="0">
+            <p style="text-align: justify;">                                       <strong>      <span style="text-decoration: underline;">Declaration &amp; Certificate</span></strong></p>
+            <p style="text-align: justify;">I hereby declare and certify that all the statements made in this application are true and correct to the best of my knowledge and belief. If any of the particulars furnished by me are found to be incorrect or suppressed, my candidature is liable to be rejected at any stage during or after selection process. Further, I understand that this position is purely temporary on contract basis, if it is found after my appointment at the Centre that the particulars furnished by me are incorrect or suppressed, my services are liable to be terminated without any notice.</p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_32">
+        <div id="cid_32" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_53">
+        <div id="cid_53" class="form-input-wide" data-layout="full">
+          <div id="text_53" class="form-html" data-component="text" tabindex="0">
+            <h5 style="text-align: right;"><span style="font-size: 24pt;"><span style="font-size: 12pt;"><span style="font-family: arial, helvetica, sans-serif;">Fees Payment 320/-    </span><span style="font-size: 24pt;"><a href="https://cosmofeed.com/vp/64e4e0f27f68ef001ea27ba3" target="_blank" rel="nofollow">PAY NOW</a></span></span><br /> </span> </h5>
+          </div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Powered by Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="233095334911050" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='233095334911050'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "233095334911050-233095334911050";
+    }
+  </script>
+</form><script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.47422"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.47422"></script>
+<script type="text/javascript">JotForm.isNewSACL=true;</script>
